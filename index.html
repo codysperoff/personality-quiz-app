@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hockey Quiz App</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header class="banner-section">
+        <h1 class="heading"><span>The Ultimate Hockey Quiz</span></h1>
+    </header>
+
+    <section class="start-section" style="display: block;">
+        <h2 class="text"> Are you a puck head? </h2>
+        <p class="text"> Take this quiz to see how much you know about the greatest game on two skates.</p>
+        <button class="start-button" id="startQuizButton">Start</button>
+    </section>
+
+    <section class="quiz-section" style="display: none;">
+        <div id="question_wrapper">
+            <h1 class="text" id="question">How many defensemen are on the ice at one time?</h1>
+            <div id="choices">
+                <input class="option" type="radio" value="0" name="option">
+                <br>
+                <input class="option" type="radio" value="1" name="option">
+                <br>
+                <input class="option" type="radio" value="2" name="option">
+                <br>
+                <input class="option" type="radio" value="3" name="option">
+                <br>
+            </div>
+        </div>
+        <div class="question-number" id="questionNumberDisplay">Question 1 of 5</div>
+    </section>
+
+    <section class="result-section" style="display: none;">
+        <h2 class="text"> Final Score </h2>
+        <h3 class="text" id="finalScore">5/5</h3>
+        <div id="result_msg"></div>
+        <button class="start-button" id="tryagain">Try Again</button>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
