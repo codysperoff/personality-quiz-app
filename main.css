@@ -120,7 +120,9 @@ body {
 #choices input.option {
     margin-right: 1rem;
     margin-left: -2rem;
+    margin-top: 25px;
 }
+
 
 .question-number {
     color: #FF4141;
