@@ -60,7 +60,7 @@ function questionDisplay() {
     $('#choices').empty();
     //2. obtain the total number of choices for the current question
     var numberOfChoices = questionsArray[currentQuestionNumber].questionChoices.length;
-    console.log(numberOfChoices);
+    //console.log(numberOfChoices);
     //3. iterate through answer choices, and add them to the question container
     for (var i = 0; i < numberOfChoices; i++) {
         //3.1 create a row of html for the new choice

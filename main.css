@@ -30,6 +30,7 @@
     src: url(../ferro-rosso/FerroRosso.ttf);
 }
 
+/*
 html {
     background: rgba(0, 0, 0, 0) url("../images/background.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -37,6 +38,7 @@ html {
     -o-background-size: cover;
     background-size: cover;
 }
+*/
 
 body {
     text-align: center;
@@ -111,7 +113,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    width: 60%;
+    width: 89%;
     padding-left: 20px;
 }
 
@@ -130,7 +132,7 @@ body {
     text-align: left;
     padding-top: 10px;
     font-size: 1rem;
-    color: wheat;
+    color: darkblue;
     font-weight: 400;
 }
 
