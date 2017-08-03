@@ -1,45 +1,86 @@
 /*--- Step 1 - Defining global variables ---*/
 
 var questionsArray = [
-//QUESTION 1
+//Extraverted
     {
-        questionText: 'How many defensemen are on the ice at one time?',
-        questionChoices: ['1', '2', '4', '5'],
+        questionText: 'I see myself as extraverted and enthusiastic.',
+        questionChoices: ['disagree strongly', 'disagree moderately', 'disagree a little', 'neither agree nor disagree', 'agree a little', 'agree moderately', 'agree strongly'],
         questionCorrectChoice: 2,
         correctDetails: 'There are 4 defensemen on the ice at one time: 2 for each team.'
     },
 
-//QUESTION 2
+//Agreeableness
     {
-        questionText: 'What is a \"Gordie Howe\" hat trick?',
-        questionChoices: ['When a player scores a goal, records an assist, and gets in a fight all in one game.', 'When a player scores 3 goals in one game.', 'When a player records 3 assists in one game.', 'When a player hits a goal in with his helmet out of mid-air'],
+        questionText: 'I see myself as sympathetic and warm.',
+        questionChoices: ['disagree strongly', 'disagree moderately', 'disagree a little', 'neither agree nor disagree', 'agree a little', 'agree moderately', 'agree strongly'],
         questionCorrectChoice: 0,
         correctDetails: 'Gordie Howe made this special type of hat trick famous, though he himself only had 2.'
     },
 
-//QUESTION 3
+//Conscientiousness
     {
-        questionText: 'What does it mean to get a boarding penalty?',
-        questionChoices: ['When an offending player pushes, trips, or checks an opposing player violently into the boards of the hockey rink.', 'When an offending player traps the puck along the boards for a time period of longer than 5 seconds.', 'When an offending player traps an opposing player along the boards.', 'When an offending player skates along the boards for too long in regulatory play.'],
+        questionText: 'I see myself as dependable and self-disciplined.',
+        questionChoices: ['disagree strongly', 'disagree moderately', 'disagree a little', 'neither agree nor disagree', 'agree a little', 'agree moderately', 'agree strongly'],
         questionCorrectChoice: 0,
         correctDetails: 'When an offending player pushes, trips, or checks an opposing player violently into the boards of the hockey rink. While a player\'s intent may not be malicious, an example must be set.'
     },
 
 //QUESTION 4
     {
-        questionText: 'How many players are on the ice at one time?',
-        questionChoices: ['10', '12', '5', '6'],
+        questionText: 'I see myself as anxious and easily upset.',
+        questionChoices: ['disagree strongly', 'disagree moderately', 'disagree a little', 'neither agree nor disagree', 'agree a little', 'agree moderately', 'agree strongly'],
         questionCorrectChoice: 1,
         correctDetails: 'There are 12 players on the ice at one time: 1 center, 2 forwards, 2 defensemen, and 1 goalie for each team.'
     },
 
 //QUESTION 5
     {
-        questionText: 'How many teams are in the National Hockey League?',
-        questionChoices: ['16', '14', '30', '32'],
+        questionText: 'I see myself being open to new experiences',
+        questionChoices: ['disagree strongly', 'disagree moderately', 'disagree a little', 'neither agree nor disagree', 'agree a little', 'agree moderately', 'agree strongly'],
+        questionCorrectChoice: 2,
+        correctDetails: 'There are 30 teams in the NHL.'
+    },
+
+//Extraverted Opposite
+    {
+        questionText: 'I see myself as reserved and quiet.',
+        questionChoices: ['disagree strongly', 'disagree moderately', 'disagree a little', 'neither agree nor disagree', 'agree a little', 'agree moderately', 'agree strongly'],
+        questionCorrectChoice: 2,
+        correctDetails: 'There are 30 teams in the NHL.'
+    },
+
+//Agreeableness Opposite
+    {
+        questionText: 'I see myself as critical and quarrelsome.',
+        questionChoices: ['disagree strongly', 'disagree moderately', 'disagree a little', 'neither agree nor disagree', 'agree a little', 'agree moderately', 'agree strongly'],
+        questionCorrectChoice: 2,
+        correctDetails: 'There are 30 teams in the NHL.'
+    },
+
+//Conscientiousness Opposite
+    {
+        questionText: 'I see myself as disorganized and careless.',
+        questionChoices: ['disagree strongly', 'disagree moderately', 'disagree a little', 'neither agree nor disagree', 'agree a little', 'agree moderately', 'agree strongly'],
+        questionCorrectChoice: 2,
+        correctDetails: 'There are 30 teams in the NHL.'
+    },
+
+//QUESTION 9
+    {
+        questionText: 'I see myself as calm and emotionally stable.',
+        questionChoices: ['disagree strongly', 'disagree moderately', 'disagree a little', 'neither agree nor disagree', 'agree a little', 'agree moderately', 'agree strongly'],
+        questionCorrectChoice: 2,
+        correctDetails: 'There are 30 teams in the NHL.'
+    },
+
+//QUESTION 10
+    {
+        questionText: 'I see myself as conventional and uncreative.',
+        questionChoices: ['disagree strongly', 'disagree moderately', 'disagree a little', 'neither agree nor disagree', 'agree a little', 'agree moderately', 'agree strongly'],
         questionCorrectChoice: 2,
         correctDetails: 'There are 30 teams in the NHL.'
     }
+
 ];
 
 var currentQuestionNumber = 0;
@@ -60,7 +101,6 @@ function questionDisplay() {
     $('#choices').empty();
     //2. obtain the total number of choices for the current question
     var numberOfChoices = questionsArray[currentQuestionNumber].questionChoices.length;
-    //console.log(numberOfChoices);
     //3. iterate through answer choices, and add them to the question container
     for (var i = 0; i < numberOfChoices; i++) {
         //3.1 create a row of html for the new choice
