@@ -30,6 +30,7 @@
     src: url(../ferro-rosso/FerroRosso.ttf);
 }
 
+
 /*
 html {
     background: rgba(0, 0, 0, 0) url("../images/background.jpg") no-repeat center center fixed;
@@ -102,7 +103,7 @@ body {
     background-image: url("../images/transparent.jpg");
     border-radius: 0.5rem;
     padding: 2rem;
-    width: 32rem;
+    width: 35rem;
     margin-bottom: 1rem;
     margin-left: auto;
     margin-right: auto;
@@ -122,7 +123,6 @@ body {
     margin-left: -2rem;
     margin-top: 25px;
 }
-
 
 .question-number {
     color: #FF4141;
