@@ -44,7 +44,7 @@ var questionsArray = [
 //Extraverted Opposite
     {
         questionText: 'I see myself as reserved and quiet.',
-        questionChoices: ['disagree strongly', 'disagree moderately', 'disagree a little', 'neither agree nor disagree', 'agree a little', 'agree moderately', 'agree strongly'],
+        questionChoices: ['agree strongly', 'agree moderately', 'agree a little', 'neither agree nor disagree', 'disagree a little', 'disagree moderately', 'disagree strongly'],
         questionCorrectChoice: 2,
         correctDetails: 'There are 30 teams in the NHL.'
     },
@@ -52,7 +52,7 @@ var questionsArray = [
 //Agreeableness Opposite
     {
         questionText: 'I see myself as critical and quarrelsome.',
-        questionChoices: ['disagree strongly', 'disagree moderately', 'disagree a little', 'neither agree nor disagree', 'agree a little', 'agree moderately', 'agree strongly'],
+        questionChoices: ['agree strongly', 'agree moderately', 'agree a little', 'neither agree nor disagree', 'disagree a little', 'disagree moderately', 'disagree strongly'],
         questionCorrectChoice: 2,
         correctDetails: 'There are 30 teams in the NHL.'
     },
@@ -60,7 +60,7 @@ var questionsArray = [
 //Conscientiousness Opposite
     {
         questionText: 'I see myself as disorganized and careless.',
-        questionChoices: ['disagree strongly', 'disagree moderately', 'disagree a little', 'neither agree nor disagree', 'agree a little', 'agree moderately', 'agree strongly'],
+        questionChoices: ['agree strongly', 'agree moderately', 'agree a little', 'neither agree nor disagree', 'disagree a little', 'disagree moderately', 'disagree strongly'],
         questionCorrectChoice: 2,
         correctDetails: 'There are 30 teams in the NHL.'
     },
@@ -68,7 +68,7 @@ var questionsArray = [
 //Emotional Stability Opposite
     {
         questionText: 'I see myself as calm and emotionally stable.',
-        questionChoices: ['disagree strongly', 'disagree moderately', 'disagree a little', 'neither agree nor disagree', 'agree a little', 'agree moderately', 'agree strongly'],
+        questionChoices: ['agree strongly', 'agree moderately', 'agree a little', 'neither agree nor disagree', 'disagree a little', 'disagree moderately', 'disagree strongly'],
         questionCorrectChoice: 2,
         correctDetails: 'There are 30 teams in the NHL.'
     },
@@ -76,7 +76,7 @@ var questionsArray = [
 //Openness to new xperiences Opposite
     {
         questionText: 'I see myself as conventional and uncreative.',
-        questionChoices: ['disagree strongly', 'disagree moderately', 'disagree a little', 'neither agree nor disagree', 'agree a little', 'agree moderately', 'agree strongly'],
+        questionChoices: ['agree strongly', 'agree moderately', 'agree a little', 'neither agree nor disagree', 'disagree a little', 'disagree moderately', 'disagree strongly'],
         questionCorrectChoice: 2,
         correctDetails: 'There are 30 teams in the NHL.'
     }
@@ -87,25 +87,23 @@ var currentQuestionNumber = 0;
 
 //How do I give each of the options a certain score?
 
-var disStrongly = questionsArray.questionChoices[0];
 var disStrongly = 1;
 
-var disModerately = questionsArray.questionChoices[1];
+
 var disModerately = 2;
 
-var disLittle = questionsArray.questionChoices[2];
+
 var disLittle = 3;
 
-var neutralChoice = questionsArray.questionChoices[3];
+
 var neutralChoice = 4;
 
-var agreeLittle = questionsArray.questionChoices[4];
 var agreeLittle = 5;
 
-var agreeModerately = questionsArray.questionChoices[5];
+
 var agreeModerately = 6;
 
-var agreeStrongly = questionsArray.questionChoices[6];
+
 var agreeStrongly = 7;
 
 
