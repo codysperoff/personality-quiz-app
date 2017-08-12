@@ -148,6 +148,13 @@ $(document).ready(function () {
 
         //get the user's choice
         var userSelection = $("input[class='option']:checked").val();
+        console.log("userSelection: " + userSelection);
+        console.log("extravertScore: " + extravertScore);
+        console.log("agreeablenessScore: " + agreeablenessScore);
+        console.log("conscientiousnessScore: " + conscientiousnessScore);
+        console.log("emotionalStabilityScore: " + emotionalStabilityScore);
+        console.log("opennessScore: " + opennessScore);
+        console.log("________________");
 
         //if its the first or sixth question, add the score to extravertScore
         //if its the second or seventh question, add the score to agreeablenessScore
@@ -192,15 +199,15 @@ $(document).ready(function () {
 
             //display scores and links to wikipedia sites.
 
-            $('#result_msg').append("Extraversion: " + extravertScore + ". More information about extraversion can be found <a href='https://en.wikipedia.org/wiki/Big_Five_personality_traits#Extraversion'>here</a>. <br>");
+            $('#result_msg').append("Extraversion: " + extravertScore + ". More information about extraversion can be found <a href='https://en.wikipedia.org/wiki/Big_Five_personality_traits#Extraversion' target='_blank'>here</a>. <br>");
             $('#result_msg').append("<br>");
-            $('#result_msg').append("Agreeableness: " + agreeablenessScore + ". More information about agreeableness can be found <a href='https://en.wikipedia.org/wiki/Big_Five_personality_traits#Agreeableness'>here</a>.<br>");
+            $('#result_msg').append("Agreeableness: " + agreeablenessScore + ". More information about agreeableness can be found <a href='https://en.wikipedia.org/wiki/Big_Five_personality_traits#Agreeableness' target='_blank'>here</a>.<br>");
             $('#result_msg').append("<br>");
-            $('#result_msg').append("Conscientiousness: " + conscientiousnessScore + ". More information about conscientiousness can be found <a href='https://en.wikipedia.org/wiki/Big_Five_personality_traits#Conscientiousness'>here</a>.<br>");
+            $('#result_msg').append("Conscientiousness: " + conscientiousnessScore + ". More information about conscientiousness can be found <a href='https://en.wikipedia.org/wiki/Big_Five_personality_traits#Conscientiousness' target='_blank'>here</a>.<br>");
             $('#result_msg').append("<br>");
-            $('#result_msg').append("Emotional Stabiliy: " + emotionalStabilityScore + ". More information about emotional stability can be found <a href='https://en.wikipedia.org/wiki/Big_Five_personality_traits#Neuroticism'>here</a>.<br>");
+            $('#result_msg').append("Emotional Stabiliy: " + emotionalStabilityScore + ". More information about emotional stability can be found <a href='https://en.wikipedia.org/wiki/Big_Five_personality_traits#Neuroticism' target='_blank'>here</a>.<br>");
             $('#result_msg').append("<br>");
-            $('#result_msg').append("Openness to experience: " + opennessScore + ". More information about openness can be found <a href='https://en.wikipedia.org/wiki/Big_Five_personality_traits#Openness_to_experience'>here</a>.<br>");
+            $('#result_msg').append("Openness to experience: " + opennessScore + ". More information about openness can be found <a href='https://en.wikipedia.org/wiki/Big_Five_personality_traits#Openness_to_experience' target='_blank'>here</a>.<br>");
 
             //edit the results section to include the final score
             //            $('#finalScore').text(totalNumberOfCorrectAnswers + "/" + totalNumberOfQuestion);
