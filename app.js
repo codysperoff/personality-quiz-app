@@ -149,18 +149,11 @@ $(document).ready(function () {
         //get the user's choice
         var userSelection = $("input[class='option']:checked").val();
 
-        //if its the first question, add the score to extravertScore
-        //if its the second question, add the score to agreeablenessScore
-        //if its the third question, add the score to conscientiousnessScore
-        //if its the fourth question, add the score to emotionalStabilityScore
-        //if its the fifth question, add the score to opennessScore
-        //if its the sixth question, add the score to extravertScore
-        //if its the seventh question, add the score to agreeablenessScore
-        //if its the eighth question, add the score to conscientiousnessScore
-        //if its the ninth question, add the score to emotionalStabilityScore
-        //if its the tenth question, add the score to opennessScore
-
-
+        //if its the first or sixth question, add the score to extravertScore
+        //if its the second or seventh question, add the score to agreeablenessScore
+        //if its the third or eighth question, add the score to conscientiousnessScore
+        //if its the fourth or ninth question, add the score to emotionalStabilityScore
+        //if its the fifth or tenth question, add the score to opennessScore
 
         if (currentQuestionNumber == 0 || currentQuestionNumber == 5) {
             extravertScore += (userSelection + 1);
@@ -199,14 +192,18 @@ $(document).ready(function () {
 
             //display scores and links to wikipedia sites.
 
-            $('#result_msg').append("Extraversion: " + extravertScore + ". More information about extraversion can be found <a href='https://en.wikipedia.org/wiki/Big_Five_personality_traits#Extraversion'>here</a>.");
-            $('#result_msg').append("Agreeableness: " + agreeablenessScore + ". More information about agreeableness can be found <a href='https://en.wikipedia.org/wiki/Big_Five_personality_traits#Agreeableness'>here</a>.");
-            $('#result_msg').append("Conscientiousness: " + conscientiousnessScore + ". More information about conscientiousness can be found <a href='https://en.wikipedia.org/wiki/Big_Five_personality_traits#Conscientiousness'>here</a>.");
-            $('#result_msg').append("Emotional Stabiliy: " + emotionalStabilityScore + ". More information about emotional stability can be found <a href='https://en.wikipedia.org/wiki/Big_Five_personality_traits#Neuroticism'>here</a>.");
-            $('#result_msg').append("Openness to experience: " + opennessScore + ". More information about openness can be found <a href='https://en.wikipedia.org/wiki/Big_Five_personality_traits#Openness_to_experience'>here</a>.");
+            $('#result_msg').append("Extraversion: " + extravertScore + ". More information about extraversion can be found <a href='https://en.wikipedia.org/wiki/Big_Five_personality_traits#Extraversion'>here</a>. <br>");
+            $('#result_msg').append("<br>");
+            $('#result_msg').append("Agreeableness: " + agreeablenessScore + ". More information about agreeableness can be found <a href='https://en.wikipedia.org/wiki/Big_Five_personality_traits#Agreeableness'>here</a>.<br>");
+            $('#result_msg').append("<br>");
+            $('#result_msg').append("Conscientiousness: " + conscientiousnessScore + ". More information about conscientiousness can be found <a href='https://en.wikipedia.org/wiki/Big_Five_personality_traits#Conscientiousness'>here</a>.<br>");
+            $('#result_msg').append("<br>");
+            $('#result_msg').append("Emotional Stabiliy: " + emotionalStabilityScore + ". More information about emotional stability can be found <a href='https://en.wikipedia.org/wiki/Big_Five_personality_traits#Neuroticism'>here</a>.<br>");
+            $('#result_msg').append("<br>");
+            $('#result_msg').append("Openness to experience: " + opennessScore + ". More information about openness can be found <a href='https://en.wikipedia.org/wiki/Big_Five_personality_traits#Openness_to_experience'>here</a>.<br>");
 
             //edit the results section to include the final score
-            $('#finalScore').text(totalNumberOfCorrectAnswers + "/" + totalNumberOfQuestion);
+            //            $('#finalScore').text(totalNumberOfCorrectAnswers + "/" + totalNumberOfQuestion);
 
             //show results and hide other containers
             $('.quiz-section').hide();
