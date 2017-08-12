@@ -33,7 +33,7 @@ var questionsArray = [
         correctDetails: 'There are 12 players on the ice at one time: 1 center, 2 forwards, 2 defensemen, and 1 goalie for each team.'
     },
 
-//Openness to new xperiences
+//Openness to new experiences
     {
         questionText: 'I see myself being open to new experiences',
         questionChoices: ['disagree strongly', 'disagree moderately', 'disagree a little', 'neither agree nor disagree', 'agree a little', 'agree moderately', 'agree strongly'],
@@ -84,30 +84,6 @@ var questionsArray = [
 ];
 
 var currentQuestionNumber = 0;
-
-//How do I give each of the options a certain score?
-
-var disStrongly = 1;
-
-
-var disModerately = 2;
-
-
-var disLittle = 3;
-
-
-var neutralChoice = 4;
-
-var agreeLittle = 5;
-
-
-var agreeModerately = 6;
-
-
-var agreeStrongly = 7;
-
-
-
 
 var totalNumberOfQuestion = questionsArray.length;
 
@@ -184,13 +160,20 @@ $(document).ready(function () {
         //if its the ninth question, add the score to emotionalStabilityScore
         //if its the tenth question, add the score to opennessScore
 
-        //if it is question 1-5, score the user's response as a normal score
-        //if it is question 6-10, score the user's response as a reversed score
 
 
-        if (currentQuestionNumber == 0) {
-
+        if (currentQuestionNumber == 0 || currentQuestionNumber == 5) {
+            extravertScore += (userSelection + 1);
+        } else if (currentQuestionNumber == 1 || currentQuestionNumber == 6) {
+            agreeablenessScore += (userSelection + 1);
+        } else if (currentQuestionNumber == 2 || currentQuestionNumber == 7) {
+            conscientiousnessScore += (userSelection + 1);
+        } else if (currentQuestionNumber == 3 || currentQuestionNumber == 8) {
+            emotionalStabilityScore += (userSelection + 1);
+        } else {
+            opennessScore += (userSelection + 1);
         }
+
 
 
         //get the correct answer choice from the question array
