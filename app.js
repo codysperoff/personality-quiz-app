@@ -163,18 +163,26 @@ $(document).ready(function () {
 
         if (currentQuestionNumber == 0 || currentQuestionNumber == 5) {
             extravertScore += (userSelection + 1);
+            console.log("extravertScore: ", extravertScore)
 
         } else if (currentQuestionNumber == 1 || currentQuestionNumber == 6) {
             agreeablenessScore += (userSelection + 1);
-
+            console.log("agreeablenessScore: ", agreeablenessScore);
         } else if (currentQuestionNumber == 2 || currentQuestionNumber == 7) {
             conscientiousnessScore += (userSelection + 1);
+            console.log("conscientiousnessScore: ", conscientiousnessScore);
+
 
         } else if (currentQuestionNumber == 3 || currentQuestionNumber == 8) {
             emotionalStabilityScore += (userSelection + 1);
+            console.log("emotionalStabilityScore: ", emotionalStabilityScore);
+
 
         } else {
             opennessScore += (userSelection + 1);
+            console.log("opennessScore: ", opennessScore);
+
+
 
         }
 
@@ -198,6 +206,7 @@ $(document).ready(function () {
             $('#result_msg').append("Emotional Stabiliy: " + emotionalStabilityScore + ". More information about emotional stability can be found <a href='https://en.wikipedia.org/wiki/Big_Five_personality_traits#Neuroticism' target='_blank'>here</a>.<br>");
             $('#result_msg').append("<br>");
             $('#result_msg').append("Openness to experience: " + opennessScore + ". More information about openness can be found <a href='https://en.wikipedia.org/wiki/Big_Five_personality_traits#Openness_to_experience' target='_blank'>here</a>.<br>");
+            $('#result_msg').append("<br>");
 
             //edit the results section to include the final score
             //            $('#finalScore').text(totalNumberOfCorrectAnswers + "/" + totalNumberOfQuestion);
@@ -224,5 +233,11 @@ $(document).ready(function () {
         //reset variables to start quiz again
         currentQuestionNumber = 0;
         totalNumberOfCorrectAnswers = 0;
+        extravertScore = 0;
+        agreeablenessScore = 0;
+        conscientiousnessScore = 0;
+        emotionalStabilityScore = 0;
+        opennessScore = 0;
+
     });
 });
