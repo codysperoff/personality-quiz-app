@@ -87,11 +87,11 @@ var currentQuestionNumber = 0;
 
 var totalNumberOfQuestion = questionsArray.length;
 
-var extravertScore = 0;
-var agreeablenessScore = 0;
-var conscientiousnessScore = 0;
-var emotionalStabilityScore = 0;
-var opennessScore = 0;
+//var extravertScore = 0;
+//var agreeablenessScore = 0;
+//var conscientiousnessScore = 0;
+//var emotionalStabilityScore = 0;
+//var opennessScore = 0;
 
 
 //var totalNumberOfCorrectAnswers = 0;
@@ -125,6 +125,11 @@ function questionDisplay() {
 /*--- Step 3 - Using functions ---*/
 
 $(document).ready(function () {
+    var extravertScore = 0;
+    var agreeablenessScore = 0;
+    var conscientiousnessScore = 0;
+    var emotionalStabilityScore = 0;
+    var opennessScore = 0;
 
     /*Hide quiz and results section upon load*/
     $('.quiz-section').hide();
@@ -147,14 +152,8 @@ $(document).ready(function () {
     $('.quiz-section').on('click', '.option', function () {
 
         //get the user's choice
-        var userSelection = $("input[class='option']:checked").val();
-        console.log("userSelection: " + userSelection);
-        console.log("extravertScore: " + extravertScore);
-        console.log("agreeablenessScore: " + agreeablenessScore);
-        console.log("conscientiousnessScore: " + conscientiousnessScore);
-        console.log("emotionalStabilityScore: " + emotionalStabilityScore);
-        console.log("opennessScore: " + opennessScore);
-        console.log("________________");
+        var stringSelection = $("input[class='option']:checked").val();
+        var userSelection = parseInt(stringSelection);
 
         //if its the first or sixth question, add the score to extravertScore
         //if its the second or seventh question, add the score to agreeablenessScore
@@ -164,29 +163,20 @@ $(document).ready(function () {
 
         if (currentQuestionNumber == 0 || currentQuestionNumber == 5) {
             extravertScore += (userSelection + 1);
+
         } else if (currentQuestionNumber == 1 || currentQuestionNumber == 6) {
             agreeablenessScore += (userSelection + 1);
+
         } else if (currentQuestionNumber == 2 || currentQuestionNumber == 7) {
             conscientiousnessScore += (userSelection + 1);
+
         } else if (currentQuestionNumber == 3 || currentQuestionNumber == 8) {
             emotionalStabilityScore += (userSelection + 1);
+
         } else {
             opennessScore += (userSelection + 1);
+
         }
-
-
-
-        //get the correct answer choice from the question array
-        //        var correctAnswer = questionsArray[currentQuestionNumber].questionCorrectChoice;
-
-
-        //        //compare the user choice with correct answer
-        //        if (userSelection == correctAnswer) {
-        //            totalNumberOfCorrectAnswers++;
-        //        }
-        //        //after the user selects an answer, diplay the question and correct answer details
-        //        $('#result_msg').append("<h3>Q: " + questionsArray[currentQuestionNumber].questionText + "</h3>");
-        //        $('#result_msg').append("<h4>A: " + questionsArray[currentQuestionNumber].correctDetails + "</h4>");
 
         //if the quiz is finished, show the result-section
         if ((currentQuestionNumber + 1) == totalNumberOfQuestion) {
