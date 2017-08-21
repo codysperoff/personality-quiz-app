@@ -241,3 +241,5 @@ $(document).ready(function () {
 
     });
 });
+
+//test new remote
