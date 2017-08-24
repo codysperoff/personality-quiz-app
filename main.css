@@ -26,7 +26,7 @@
 */
 
 html {
-    background: url("..images/personality-bkgrnd-image.jpg") no-repeat center center fixed;
+    background: url("../images/personality-bkgrnd-image.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -50,12 +50,12 @@ body {
 */
 
 .heading {
-    font-size: 3rem;
+    font-size: 4rem;
     padding-top: 6rem;
     margin-bottom: 2rem;
     text-shadow: 3px 3px 3px black;
-    color: #ff4242;
-    font-family: ferrari;
+    color: deepskyblue;
+    font-family: 'Amatic SC', cursive;
 }
 
 .heading .logo {
