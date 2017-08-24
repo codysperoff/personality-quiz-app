@@ -25,13 +25,6 @@
 (the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules bellow (h2, h3, h4, h5, h6, p, a, ul, li))
 */
 
-/*
-@font-face {
-    font-family: ferrari;
-    src: url(../ferro-rosso/FerroRosso.ttf);
-}
-*/
-
 
 /*
 html {
@@ -61,7 +54,7 @@ body {
 
 .heading {
     font-size: 3rem;
-    padding-top: 1rem;
+    padding-top: 6rem;
     margin-bottom: 2rem;
     text-shadow: 3px 3px 3px black;
     color: #ff4242;
